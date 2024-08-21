@@ -4,9 +4,12 @@ name: My workflow
 on:
   workflow_dispatch:
     inputs:
-      asdfasd:
+      param1:
         type: string
-        default: asdfasdf
+        default: value1
+      param2:
+        type: number
+        required: true
 jobs:
   build:
     steps:
