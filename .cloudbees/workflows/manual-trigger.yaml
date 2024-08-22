@@ -10,6 +10,16 @@ on:
       param2:
         type: number
         required: true
+      param3:
+        type: boolean
+        default: false
+      param4:
+        type: choice
+        options:
+          - opt1
+          - opt2
+          - opt3
+        default: ""
 jobs:
   build:
     steps:
