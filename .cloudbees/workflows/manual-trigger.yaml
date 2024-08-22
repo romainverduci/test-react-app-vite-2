@@ -19,7 +19,6 @@ on:
           - opt1
           - opt2
           - opt3
-        default: ""
 jobs:
   build:
     steps:
