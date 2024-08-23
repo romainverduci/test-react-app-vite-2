@@ -14,7 +14,12 @@ on:
         type: boolean
         default: false
       param4:
-        type: string
+        type: choice
+        options:
+          - opt1
+          - opt2
+          - opt3
+        default: opt3
 jobs:
   build:
     steps:
