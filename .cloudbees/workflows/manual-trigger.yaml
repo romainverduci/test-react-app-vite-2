@@ -11,6 +11,19 @@ on:
           string2
           string3
           string4
+      param2:
+        type: choice
+        options:
+          - option 1
+          - option 2
+          - option3
+        default: option 2
+      param3:
+        type: boolean
+        default: true
+      param4:
+        type: number
+        default: 12345
 jobs:
   build:
     steps:
