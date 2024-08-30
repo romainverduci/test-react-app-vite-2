@@ -6,20 +6,11 @@ on:
     inputs:
       param1:
         type: string
-        default: value1
-      param2:
-        type: string
-        required: true
-      param3:
-        type: boolean
-        default: false
-      param4:
-        type: choice
-        options:
-          - opt1
-          - opt2
-          - opt3
-        default: opt3
+        default: |-
+          string1
+          string2
+          string3
+          string4
 jobs:
   build:
     steps:
