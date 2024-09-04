@@ -27,6 +27,22 @@ on:
     - cron: "* * * 5-10 *"
     - cron: "* * * 3/4 *"
     - cron: "* * * 1-10/4 *"
+    # months
+    - cron: "* * * 5 *"
+    - cron: "* * * */5 *"
+    - cron: "* * * 5,10,12 *"
+    - cron: "* * * 5-10 *"
+    - cron: "* * * 3/4 *"
+    - cron: "* * * 2-10/4 *"
+    - cron: "* * * MAY *"
+    - cron: "* * * JAN,JUN,OCT *"
+    - cron: "* * * APR-OCT *"
+    - cron: "* * * 4-OCT *"
+    - cron: "* * * APR-10 *"
+    - cron: "* * * JUL/4 *"
+    - cron: "* * * JAN-DEC/4 *"
+    - cron: "* * * 1-DEC/4 *"
+    - cron: "* * * JAN-12/4 *"
 jobs:
   build:
     steps:
