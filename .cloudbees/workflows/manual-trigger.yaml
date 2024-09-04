@@ -43,6 +43,22 @@ on:
     - cron: "* * * JAN-DEC/4 *"
     - cron: "* * * 1-DEC/4 *"
     - cron: "* * * JAN-12/4 *"
+    # days of week
+    - cron: "* * * * 5"
+    - cron: "* * * * */5"
+    - cron: "* * * * 1,3,5"
+    - cron: "* * * * 2-5"
+    - cron: "* * * * 3/4"
+    - cron: "* * * * 0-6/4"
+    - cron: "* * * * FRI"
+    - cron: "* * * * MON,WED,FRI"
+    - cron: "* * * * TUE-SAT"
+    - cron: "* * * * 2-SAT"
+    - cron: "* * * * TUE-6"
+    - cron: "* * * * MON/4"
+    - cron: "* * * * MON-FRI/3"
+    - cron: "* * * * 1-FRI/3"
+    - cron: "* * * * MON-5/3"
 jobs:
   build:
     steps:
