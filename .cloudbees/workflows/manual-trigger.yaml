@@ -1,80 +1,6 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My workflow
-on:
-  schedule:
-    # minutes
-    - cron: "5 * * * *"
-    - cron: "5,10,15 * * * *"
-    - cron: "5-30 * * * *"
-    - cron: "5-30,45 * * * *"
-    - cron: "30/10 * * * *"
-    - cron: "30/10,25 * * * *"
-    - cron: "10-50/10 * * * *"
-    - cron: "10-50/10,45 * * * *"
-    # hours
-    - cron: "* 5 * * *"
-    - cron: "* 5,10,15 * * *"
-    - cron: "* 5-20 * * *"
-    - cron: "* 5-20,5 * * *"
-    - cron: "* 3/10 * * *"
-    - cron: "* 14/1,2 * * *"
-    - cron: "* 10-20/10 * * *"
-    - cron: "* 10-20/10,4 * * *"
-    # days
-    - cron: "* * 5 * *"
-    - cron: "* * 5,10,15 * *"
-    - cron: "* * 5-20 * *"
-    - cron: "* * 5-20,5 * *"
-    - cron: "* * 3/10 * *"
-    - cron: "* * 14/1,2 * *"
-    - cron: "* * 10-20/10 * *"
-    - cron: "* * 10-20/10,4 * *"
-    # months
-    - cron: "* * * 5 *"
-    - cron: "* * * 5,10 *"
-    - cron: "* * * 5-10 *"
-    - cron: "* * * MAY-10 *"
-    - cron: "* * * 4-NOV *"
-    - cron: "* * * MAY-NOV *"
-    - cron: "* * * 5-10,4 *"
-    - cron: "* * * MAY-NOV,4 *"
-    - cron: "* * * 5-OCT,4 *"
-    - cron: "* * * JAN-10,4 *"
-    - cron: "* * * 5-10,APR *"
-    - cron: "* * * MAY-NOV,APR *"
-    - cron: "* * * 5-OCT,APR *"
-    - cron: "* * * JAN-10,APR,JUN *"
-    - cron: "* * * 3/10 *"
-    - cron: "* * * 3/10,2 *"
-    - cron: "* * * 1-5/4 *"
-    - cron: "* * * 10-12/10,5 *"
-    - cron: "* * * MAR/3 *"
-    - cron: "* * * JAN/4,2 *"
-    - cron: "* * * JAN/4,MAR,JUN *"
-    - cron: "* * * 1-5/4 *"
-    - cron: "* * * 1-11/2,5 *"
-    - cron: "* * * JAN-11/2,6 *"
-    - cron: "* * * 1-NOV/2,6 *"
-    - cron: "* * * JAN-NOV/2,6 *"
-    - cron: "* * * JAN-NOV/2,JUN *"
-
-    # days of week
-    - cron: "* * * * 6"
-    - cron: "* * * * */5"
-    - cron: "* * * * 0,3,5"
-    - cron: "* * * * 2-5"
-    - cron: "* * * * 3/4"
-    - cron: "* * * * 0-6/4"
-    - cron: "* * * * FRI"
-    - cron: "* * * * MON,WED,FRI"
-    - cron: "* * * * TUE-SAT"
-    - cron: "* * * * 2-SAT"
-    - cron: "* * * * TUE-6"
-    - cron: "* * * * MON/4"
-    - cron: "* * * * MON-FRI/3"
-    - cron: "* * * * 1-FRI/3"
-    - cron: "* * * * MON-5/3"
 jobs:
   build:
     steps:
@@ -83,3 +9,12 @@ jobs:
         shell: sh
         run: |
           echo "hello world !"
+on:
+  workflow_dispatch:
+    inputs:
+      param1:
+        type: string
+        default: Test
+      param2:
+        type: boolean
+        default: true
