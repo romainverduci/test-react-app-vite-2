@@ -4,7 +4,7 @@ name: My workflow
 on:
   workflow_dispatch:
   schedule:
-    - cron: 35 12 26 9 *
+    - cron: 43 12 26 9 *
 jobs:
   build:
     steps:
